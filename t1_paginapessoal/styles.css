@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+nav {
+    width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+nav h2 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 8px;
+    color: #0066cc;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e0e0e0;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Hide all sections by default */
+section {
+    display: none;
+}
+
+/* Show the section that is targeted */
+section:target {
+    display: block;
+}
+
+/* Show the about section when no section is targeted */
+section#about {
+    display: block;
+}
+
+/* Hide the about section when any section is targeted */
+section:target ~ section#about {
+    display: none;
+}
+
+/* When about section itself is targeted, make sure it's visible */
+section#about:target {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
